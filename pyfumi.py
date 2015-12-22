@@ -19,16 +19,19 @@ def hline():
     print("-"*80)
 
 if __name__ == "__main__":
-    print("Test Mixed")
     duel(Dummy("R"), Mixed())
     duel(Dummy("RRRPPSP"), Mixed())
+    duel(Markov(1), Mixed())
     hline()
 
-    print("Test Markov(1)")
     duel(Dummy("R"), Markov(1))
     duel(Dummy("RRRPPSP"), Markov(1))
     hline()
 
-    print("Test Markov(2)")
     duel(Dummy("R"), Markov(2))
     duel(Dummy("RRRPPSP"), Markov(2))
+    duel(Dummy("RRRPPSPPS"), Markov(2))
+    hline()
+
+    duel(Dummy("RRRPPSPPS"), Markov(3))
+    duel(Dummy("RRRPPSPPS"), Markov(4))
