@@ -5,6 +5,7 @@ from strats.dummy import Dummy
 from strats.markov import Markov
 from strats.mixed import Mixed
 from strats.human import Human
+from strats.custom import Custom
 
 def duel(player_1, player_2, nb_games=1000):
     print(player_1.get_name()+" vs "+player_2.get_name())
@@ -35,3 +36,5 @@ if __name__ == "__main__":
 
     duel(Dummy("RRRPPSPPS"), Markov(3))
     duel(Dummy("RRRPPSPPS"), Markov(4))
+
+    duel(Custom(0.,0.5,0.5), Markov(1))
