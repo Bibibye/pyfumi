@@ -3,7 +3,7 @@ from strats.strat import Strat
 class Dummy(Strat):
     def __init__(self, choice=['R']):
         self.choice = choice
-        self.name = "dummy"
+        self.name = "dummy("+choice+")"
         self.count = 0
         self.frequency = len(choice)
 

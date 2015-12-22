@@ -5,7 +5,7 @@ class Markov(Strat):
     def __init__(self, n=1):
         if n < 1:
             raise ValueError("n must be greater than 1")
-        self.name = "markov"
+        self.name = "markov("+str(n)+")"
         self.n = n
         self.mem = 'X'*n
         self.strat = {}
